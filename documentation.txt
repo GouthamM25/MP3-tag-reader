@@ -1,0 +1,69 @@
+Project: MP3 TAG READER AND EDITOR FOR ID3v2
+Name   : Goutham M
+Date   : 20/11/24
+
+->for invalid arguments:~/mp3tag_reader$ ./a.out
+ 
+------------------------------------------------------------------
+ERROR: ./a.out : INVALID ARGUMENTS
+USAGE :
+To view please pass like: ./a.out -v mp3filename
+To edit please pass like: ./a.out -e -t/-a/-A/-m/-y/-c changing_text mp3filename
+To get help pass like : ./a.out --help
+------------------------------------------------------------------
+
+->for help menu:~/mp3tag_reader$./a.out --help
+
+------------------------------------------------------------------
+ERROR: ./a.out : INVALID ARGUMENTS
+USAGE :
+To view please pass like: ./a.out -v mp3filename
+To edit please pass like: ./a.out -e -t/-a/-A/-m/-y/-c changing_text mp3filename
+To get help pass like : ./a.out --help
+------------------------------------------------------------------
+
+
+-----------------------------HELP MENU--------------------------------
+1. -v -> to view mp3 file contents
+2. -e -> to edit mp3 file contents
+         2.1. -t -> to edit song title
+         2.2. -a -> to edit artist name
+         2.3. -A -> to edit album name
+         2.4. -y -> to edit year
+         2.5. -m -> to edit content
+         2.6. -c -> to edit comment
+------------------------------------------------------------------------
+
+->For Viewing: ~/mp3tag_reader$ ./a.out -v audiofile.mp3
+
+------------------------SELECTED VIEW--------------------------
+---------------------------------------------------------------
+             MP3 TAG READER AND EDITOR FOR ID3v2
+---------------------------------------------------------------
+Title   :       YoYo-honeysing 
+Artist  :       Yo Yo Honey Singh - [SongsPk.CC] 
+Album   :       Yaariyan 
+Year    :       2034 
+Music   :       Bollywood Music - [SongsPk.CC] 
+Comment :       eng 
+---------------------------------------------------------------
+
+->for editing: ~/mp3tag_reader$ ./a.out -e -t Mayavi audiofile.mp3
+
+Edited successfully
+------------------------SELECTED VIEW--------------------------
+---------------------------------------------------------------
+                 MP3 TAG READER AND EDITOR FOR ID3v2
+---------------------------------------------------------------
+Title   :       Mayavi 
+Artist  :       Yo Yo Honey Singh - [SongsPk.CC] 
+Album   :       Yaariyan 
+Year    :       2034 
+Music   :       Bollywood Music - [SongsPk.CC] 
+Comment :       eng 
+---------------------------------------------------------------
+
+->Validations:~/mp3tag_reader$ ./a.out -v audiofile
+ERROR: audiofile is not a .mp3 file
+~/mp3tag_reader$ ./a.out -v audiofile.
+ERROR: audiofile. is not a .mp3 file
